@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=BookStore/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.bookstore.service{BookService.java[BookService" modifiers="513" timestamp="1698130302067"/>
+    <typeInfo handle="=BookStore/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.bookstore.dao{BookDao.java[BookDao" modifiers="513" timestamp="1698130164494"/>
+    <typeInfo handle="=BookStore/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.bookstore.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1694762019602"/>
+    <typeInfo handle="=BookStore/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.bookstore.dao{CustomerDao.java[CustomerDao" modifiers="513" timestamp="1694762019602"/>
+    <typeInfo handle="=Chat/C:\/Users\/Student\/.m2\/repository\/org\/springframework\/spring-websocket\/4.3.30.RELEASE\/spring-websocket-4.3.30.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-websocket-4.3.30.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-websocket=/=/maven.version=/4.3.30.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.web.socket.handler(TextWebSocketHandler.class[TextWebSocketHandler" modifiers="33" timestamp="1694478465157"/>
+    <typeInfo handle="=BookStore/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.bookstore.service{OrdersService.java[OrdersService" modifiers="513" timestamp="1695087388980"/>
+</typeInfoHistroy>

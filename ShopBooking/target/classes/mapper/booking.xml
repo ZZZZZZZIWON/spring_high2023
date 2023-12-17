@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="booking">
+
+	<select id="list" resultType="Booking">
+		SELECT book.*, member.title memberTitle, time_table.hour hour 
+		FROM (SELECT shop.*, time_table.time_id, time_table.hour FROM shop, time_table) book
+		LEFT JOIN booking ON book.table_id=booking.table_id AND book.time_id=booking.time_id
+		LEFT JOIN member ON booking.member_id=member.id
+		LEFT JOIN time_table ON book.time_id=time_table.time_id
+		ORDER BY time_table.hour, book.table_id
+	</select>
+
+	<select id="list_shop" resultType="Booking">
+		SELECT book.*, member.title memberTitle, time_table.hour hour 
+		FROM (SELECT shop.*, time_table.time_id, time_table.hour FROM shop, time_table WHERE shop.member_id=#{id} AND time_table.member_id=#{id}) book
+		LEFT JOIN booking ON book.table_id=booking.table_id AND book.time_id=booking.time_id
+		LEFT JOIN member ON booking.member_id=member.id
+		LEFT JOIN time_table ON book.time_id=time_table.time_id
+		ORDER BY time_table.hour, book.table_id
+	</select>
+	
+	<delete id="delete">
+		DELETE FROM booking 
+		WHERE booking_id=#{booking_id}
+	</delete>
+	
+	<insert id="add">
+		INSERT INTO booking
+		VALUES (NULL, #{tableId}, #{timeId}, #{day}, #{memberId})
+	</insert>
+
+	<select id="item" resultType="Booking">
+		SELECT * FROM booking
+		WHERE booking_id=#{booking_id}
+	</select>	
+	
+	<update id="update">
+		UPDATE booking
+		SET table_id=#{tableId}, time_id=#{timeId}, day=#{day}
+		WHERE booking_id=#{booking_id}
+	</update>
+	
+</mapper>

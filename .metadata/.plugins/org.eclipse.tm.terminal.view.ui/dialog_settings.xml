@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="LaunchTerminalSettingsDialog">
+		<section name="SettingsPanelControl">
+			<section name="&apos;wsl --install&apos;로 설치할 수 있는 배포판 목록을 표시합니다. (WSL)">
+			</section>
+		</section>
+	</section>
+</section>

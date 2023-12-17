@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.ac.kopo.bookmall.dao.BookDao" >
+	<sql id="search">
+		SELECT *FROM book 
+		
+		<where>
+			<if test="search == 1">
+				bookid=#{keyword}
+			</if>
+			<if test="search == 2">
+				bookname LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+			</if>
+			<if test="search == 3">
+				publisher LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+			</if>
+		</where>
+		
+		ORDER BY bookid
+	</sql>
+
+	<select id="total" resultType="Integer">
+		SELECT COUNT(*) FROM (<include refid="search"></include>)
+	</select>
+
+	<select id="list" resultType="Book">
+		SELECT * FROM 
+			(SELECT sub.*, ROWNUM rnum FROM 
+				(<include refid="search"></include>) sub)
+		<![CDATA[
+		WHERE rnum > ((#{page} - 1) * #{perPage}) AND rnum <= (#{page} * #{perPage})
+	]]>
+	</select>
+	
+	<select id="item" resultType="Book">
+		SELECT * FROM BOOK
+		WHERE bookid=#{bookid} 
+	</select>
+	
+	<insert id="add">
+		INSERT INTO BOOK
+		VALUES (#{bookid}, #{bookname}, #{publisher}, #{price})
+	</insert>
+	
+	<update id="update">
+		UPDATE book
+		SET bookname=#{bookname}, publisher=#{publisher}, price=#{price}
+		WHERE bookid=#{bookid}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM BOOK
+		WHERE bookid=#{bookid}
+	</delete>
+	
+</mapper>

@@ -1,0 +1,8 @@
+127.0.0.1 - - [10/Jul/2023:14:25:15 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [10/Jul/2023:14:25:24 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [10/Jul/2023:14:25:24 +0900] "GET /kopo/WEB-INF/classes/kr/ac/kopo/bookshop/controller/BookController.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [10/Jul/2023:14:25:24 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [10/Jul/2023:14:25:36 +0900] "GET /kopo/book/list HTTP/1.1" 200 6046
+0:0:0:0:0:0:0:1 - - [10/Jul/2023:14:25:37 +0900] "GET /kopo/book/init HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Jul/2023:14:25:37 +0900] "GET /kopo/book/list HTTP/1.1" 200 5775
+0:0:0:0:0:0:0:1 - - [10/Jul/2023:14:25:40 +0900] "GET /kopo/book/list?page=1 HTTP/1.1" 200 5775

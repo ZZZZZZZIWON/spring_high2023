@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Chat"/>
+<aop-project name="BookShop"/>
+<aop-project name="BookStore">
+<aspect-definition advice-class-name="org.springframework.transaction.interceptor.TransactionInterceptor" advice-method-name="invoke" advice-method-parameter-types="org.aopalliance.intercept.MethodInvocation" advice-type="AROUND" aspect-end-line-number="28" aspect-name="org.springframework.transaction.interceptor.TransactionInterceptor#BookStore#src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml#28" aspect-start-line-number="28" factory-id="org.springframework.ide.eclipse.aop.core.javaAdvisorDefinitionElementFactory" file="/BookStore/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" pointcut-expression="(@within(org.springframework.transaction.annotation.Transactional) || @annotation(org.springframework.transaction.annotation.Transactional)) &amp;&amp; execution(* *..*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:BookStore|3:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml|7:beans:beans:10|8:ordersServiceImpl:10" bean-file="/BookStore/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/BookStore/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" source="=BookStore/C:\/Users\/Student\/.m2\/repository\/org\/springframework\/spring-tx\/4.3.30.RELEASE\/spring-tx-4.3.30.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-tx-4.3.30.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-tx=/=/maven.version=/4.3.30.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=BookStore/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.bookstore.service{OrdersServiceImpl.java[OrdersServiceImpl~order~QString;~QHashMap\&lt;QLong;QInteger;&gt;;" target-start-line="31"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="ShopBooking"/>
+<aop-project name="BookMall"/>
+<aop-project name="FileUpload"/>
+</aop-reference-model>
